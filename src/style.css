@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.cdnfonts.com/css/jetbrains-mono");
+@import url("https://fonts.cdnfonts.com/css/cubano");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *:root {
+    @apply bg-background text-text;
+    font-family: "JetBrains Mono", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    box-sizing: border-box;
+    letter-spacing: normal;
+    scroll-padding-top: 3em;
+  }
+
+  .font-head {
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: normal;
+  }
+
+  .font-cubano {
+    letter-spacing: 0.5px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(131, 131, 131, 0.1);
+  }
+
+  a {
+    @apply hover:text-green-500;
+  }
+
+  .outline-text-lg {
+    text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      2px 2px 0 #000;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply whitespace-nowrap border-2 
+    border-black px-6
+    py-2  font-bold
+    text-text 
+    duration-200 hover:transition-colors;
+  }
+
+  .color-effect {
+    @apply bg-gradient-to-r from-primary to-accent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
